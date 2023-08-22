@@ -9,7 +9,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'client_id' => env('VIMEO_CLIENT_ID'),
-    'secret' => env('VIMEO_SECRET'),
-    'token' => env('VIMEO_TOKEN'),
+    'client_id' => env('VIMEO_CLIENT_ID', ''),
+    'secret' => env('VIMEO_SECRET', ''),
+    'token' => env('VIMEO_TOKEN', ''),
 ];
