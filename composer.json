@@ -1,11 +1,30 @@
 {
     "name": "sylapi/nova-vimeo",
+    "description": "A Laravel Nova field.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "vimeo/vimeo-api": "^3.0"
+    },
     "autoload": {
         "psr-4": {
-            "Sylapi\\NovaVimeo\\": "src/"
+            "Sylapi\\Vimeo\\": "src/"
         }
     },
-    "require": {
-        "vimeo/vimeo-api": "^3.0"
-    }
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sylapi\\Vimeo\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
