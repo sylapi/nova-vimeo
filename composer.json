@@ -1,0 +1,11 @@
+{
+    "name": "sylapi/nova-vimeo",
+    "autoload": {
+        "psr-4": {
+            "Sylapi\\NovaVimeo\\": "src/"
+        }
+    },
+    "require": {
+        "vimeo/vimeo-api": "^3.0"
+    }
+}
