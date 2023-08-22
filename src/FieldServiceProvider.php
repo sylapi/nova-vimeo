@@ -16,6 +16,13 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $config_path = dirname(__DIR__).'/config/vimeo.php';
+
+        $this->publishes(
+            [$config_path => config_path('vimeo.php')],
+            'config'
+        );
+
         $this->app->booted(function () {
             $this->routes();
         });
@@ -33,12 +40,7 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $config_path = dirname(__DIR__).'/config/vimeo.php';
-
-        $this->publishes(
-            [$config_path => config_path('vimeo.php')],
-            'config'
-        );
+       
     }
 
     /**
