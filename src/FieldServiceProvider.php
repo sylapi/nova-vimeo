@@ -26,14 +26,19 @@ class FieldServiceProvider extends ServiceProvider
         });
     }
 
-    /**
+   /**
      * Register any application services.
      *
      * @return void
      */
     public function register()
     {
-        //
+        $config_path = dirname(__DIR__).'/config/vimeo.php';
+
+        $this->publishes(
+            [$config_path => config_path('vimeo.php')],
+            'config'
+        );
     }
 
     /**
